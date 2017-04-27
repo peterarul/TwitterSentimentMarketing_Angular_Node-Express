@@ -1,0 +1,13 @@
+.card-image {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.right-content {
+  width: 80%;
+  float: left;
+}
+.card-title {
+  padding-left: 20px;
+}

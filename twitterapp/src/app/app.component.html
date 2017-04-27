@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="content">
+  <h1>Twitter Sentiment Analysis</h1>
+</div>
+  <div class="sw">
+
+    <form>
+      <input type="search" class="search" [(ngModel)]="searchquery" [ngModelOptions]="{standalone: true}" placeholder="Search..." />
+      <button class="go"><span class="entypo-search" (click)="authandsearch()"></span></button>
+
+    </form>
+  </div>
+  <div class="content">
+    <div *ngFor="let item of tweetsdata" class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{item.user.profile_image_url}}">
+        </div>
+        <div class="right-content">
+          <span class="card-title">{{item.user.name}}</span>
+          <div class="card-content">
+            <p>{{item.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="row">
+  <div class="input-field col s12">
+    <input id="hashtags" type="text" [(ngModel)]="searchquery" [ngModelOptions]="{standalone: true}">
+    <label for="hashtags">Search by hashtags</label>
+  </div>
+</div>
+<button class="waves-effect waves-light btn" (click)="authandsearch()">Search</button>
+
+<div *ngFor="let item of tweetsdata" class="col s12 m7">
+  <div class="card">
+    <div class="card-image">
+      <img style={width:10px,height:10px;} src={{item.user.profile_image_url}}>
+    </div>
+    <div class="right-content">
+      <span class="card-title">{{item.user.name}}</span>
+      <div class="card-content">
+        <p>{{item.text}}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="waves-effect waves-light btn" (click)="usercall()">User Timeline</button>
+-->
